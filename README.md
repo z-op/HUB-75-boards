@@ -56,6 +56,11 @@ The following changes have to be made to the buffers:
 * Cut the trace to the pin `DIR` (pin 20) and wire it to a GND source to configure the buffer as input.
 * Replace the buffer with a buffer with 5V tolerant inputs, such as the `74LVC245` ([datasheet](https://www.ti.com/lit/ds/symlink/sn74lvc245a.pdf)).
 
+Anotner and may be better way to get 5v tolerance and input functionality of pins:
+* De-solder the `74HC245T` buffer and directly replace it to `SN74CB3T3245` (marking KS245)  ([datasheet](https://www.ti.com/lit/gpn/sn74cb3t3245)).
+* Wire cutting not needed.
+* Pins connected to replaced buffers are bi-directional.
+
 After these modifications the board might look a like this (on this particular board a single buffer has been replace, as it is a test-board for LitexCNC).
 
 TODO: picture to be taken
